@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<head>
+ <meta charset="UTF-8">
+ <title>San Diego Top Spots</title>
+<!-- bower:css -->
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+<!-- endbower -->
+
+<!-- inject:css -->
+<link rel="stylesheet" href="/styles/index.css">
+<!-- endinject -->
+</head>
+
+<header>
+	<h1>San Diego Top Spots</h1>
+
+</header>
+
+<body>
+<!-- bower:js -->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<!-- endbower -->
+<div class="container" ng-controller="myController">
+<table id="info" class= "table-striped table">
+<thead>
+<tbody>
+	
+<tr>
+		<th>Name</th>
+		<th>Description</th>
+		<th>Link</th>
+</tr>
+</thead>
+
+<tr ng-repeat="data in places">
+	<th>{{data.name}}<th>
+	<th>{{data.description}}</th>
+	<th><a href="https://www.google.com/maps?q={{data.location[0]}},{{data.location[1]}}"><button type='button' class= 'btn btn-primary'>Google Maps</button></a></th>
+
+
+
+
+</tbody>
+
+</table>
+</div>
+
+  
+
+<!-- inject:js -->
+<script src="/app/index.js"></script>
+<!-- endinject -->
+</body>
+</html>
+
+
+
+
+
